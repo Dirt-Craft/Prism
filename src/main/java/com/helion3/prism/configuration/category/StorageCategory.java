@@ -43,8 +43,8 @@ public class StorageCategory {
             + "   (H2, MongoDB, MySQL)")
     private String engine = "h2";
 
-    @Setting(value = "expire-records", comment = "The amount of time records are stored for")
-    private String expireRecords = "4w";
+    //@Setting(value = "expire-records", comment = "The amount of time records are stored for")
+    private String expireRecords = "2d";
 
     @Setting(value = "maximum-pool-size", comment = "Maximum size of the MySQL connection pool")
     private int maximumPoolSize = 10;
