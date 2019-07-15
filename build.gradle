@@ -51,14 +51,6 @@ configurations {
     compileJava.options.compilerArgs += ["-Xlint:all", "-Xlint:-path", "-Xlint:-processing"]
     compileJava.options.deprecation = true
     compileJava.options.encoding = "utf8"
-    jar.dependsOn("shadowJar")
-    licenseMain.ext.name = project.archivesBaseName
-    licenseMain.ext.organization = "Helion3"
-    licenseMain.ext.url = "http://helion3.com/"
-    licenseMain.ext.year = "2015"
-    project.ext.buildNumber = project.hasProperty("buildNumber") ? buildNumber : "0"
-    project.ext.ciSystem = project.hasProperty("ciSystem") ? ciSystem : "unknown"
-    project.ext.commit = project.hasProperty("commit") ? commit : "unknown"
 }
 
 repositories {

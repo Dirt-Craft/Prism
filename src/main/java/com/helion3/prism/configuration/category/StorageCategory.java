@@ -38,9 +38,9 @@ public class StorageCategory {
     @Setting(value = "database", comment = "The name of the database")
     private String database = "prism";
 
-    @Setting(value = "engine", comment = ""
-            + "The database engine\n"
-            + "   (H2, MongoDB, MySQL)")
+//    @Setting(value = "engine", comment = ""
+//            + "The database engine\n"
+//            + "   (H2, MongoDB, MySQL)")
     private String engine = "h2";
 
     //@Setting(value = "expire-records", comment = "The amount of time records are stored for")
