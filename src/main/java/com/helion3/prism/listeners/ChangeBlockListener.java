@@ -31,6 +31,7 @@ import com.helion3.prism.util.EventUtil;
 import com.helion3.prism.util.PrismEvents;
 import org.spongepowered.api.block.BlockSnapshot;
 import org.spongepowered.api.block.BlockType;
+import org.spongepowered.api.block.tileentity.TileEntity;
 import org.spongepowered.api.data.Transaction;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.event.Listener;
@@ -51,6 +52,8 @@ public class ChangeBlockListener {
             event.setCancelled(true);
             return;
         }
+
+        if (event.getCause().first(TileEntity.class).isPresent()) return;
 
         if (event.getTransactions().isEmpty()
                 || (!Prism.getInstance().getConfig().getEventCategory().isBlockBreak()
